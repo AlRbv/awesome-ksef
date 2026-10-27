@@ -29,7 +29,7 @@
 
 ## Walidatory
 
-- [ksefuj.to](https://ksefuj.to) - Darmowy walidator FA(3) działający w całości po stronie klienta (WebAssembly); weryfikuje zgodność z XSD oraz 42 regułami biznesowymi, obsługuje wiele plików jednocześnie, dostępny też jako pakiet npm i CLI. Open source (Apache 2.0).
+- [ksefuj.to](https://ksefuj.to) - Darmowy walidator FA(3) działający w całości w przeglądarce (WebAssembly). Sprawdza zgodność ze schematem XSD i regułami z broszury informacyjnej MF, a także kwoty VAT i sumy, kurs NBP i numer konta. Obsługuje wiele plików naraz, ma też podgląd PDF z kodem QR i kalkulator kursów NBP. Open source (Apache 2.0).
 - [ksefwalidator.pl](https://ksefwalidator.pl) - Przeglądarkowy walidator XML FA(3) działający po stronie klienta; sprawdza zgodność z XSD, poprawność NIP oraz status podatnika na Białej Liście. Darmowy.
 - [naprawksef.pl](https://naprawksef.pl) - Walidator FA(3)/FA(2) z unikalną funkcją automatycznej naprawy najczęstszych błędów w strukturze XML faktury. Freemium (3 walidacje dziennie za darmo).
 - [Sorgera KSeF Validator](https://services.sorgera.com/ksef/validator) - Walidator FA(3) klasy enterprise z podświetlaniem błędów na poziomie linii XML i zaawansowanymi komunikatami diagnostycznymi. Darmowy.
@@ -47,8 +47,8 @@
 
 ## Narzędzia dla programistów
 
-- [ksefuj/ksefuj](https://github.com/ksefuj/ksefuj) - Monorepo projektu ksefuj.to: aplikacja webowa, pakiet npm `@ksefuj/validator`, CLI i inne narzędzia dla deweloperów integrujących KSeF. Open source (Apache 2.0).
-- [@ksefuj/validator](https://www.npmjs.com/package/@ksefuj/validator) - Pakiet npm do programatycznej walidacji faktur FA(3) w Node.js i przeglądarce, z obsługą TypeScript i API strumieniowym. Open source (Apache 2.0).
+- [ksefuj/ksefuj](https://github.com/ksefuj/ksefuj) - Monorepo projektu ksefuj.to: aplikacja internetowa, pakiet npm `@ksefuj/validator` z CLI i generator wizualizacji PDF. Open source (Apache 2.0).
+- [@ksefuj/validator](https://www.npmjs.com/package/@ksefuj/validator) - Pakiet npm i CLI (`ksef-validate`) do walidacji faktur FA(3) w Node.js i w przeglądarce, z typami TypeScript i opcjonalnym sprawdzaniem kursów NBP. Open source (Apache 2.0).
 
 ```sh
 npx @ksefuj/validator faktura.xml
@@ -59,7 +59,7 @@ npx @ksefuj/validator faktura.xml
 
 ## Agent Skills
 
-- [ksef-fa3](https://github.com/ksefuj/ksefuj/tree/main/skills/ksef-fa3) - Skill dla Claude Code do generowania i walidacji faktur FA(3); zawiera mapowanie schematu XSD, przykłady XML dla 7 scenariuszy (WDT, eksport, odwrotne obciążenie, zaliczki, korekty) oraz referencję wszystkich 42 reguł semantycznych. Open source (Apache 2.0).
+- [ksefuj/skills](https://github.com/ksefuj/skills) - Skille dla Claude'a (Claude Code i Claude.ai) do generowania plików XML faktur FA(3) (`ksef-invoice`) i faktur korygujących (`ksef-correction`). Obejmują m.in. WDT, eksport, odwrotne obciążenie, zwolnienia, zaliczki i procedurę marży. Open source (Apache 2.0).
 
 ## Monitory i narzędzia pomocnicze
 
